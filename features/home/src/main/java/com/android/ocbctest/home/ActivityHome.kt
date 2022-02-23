@@ -39,7 +39,7 @@ class ActivityHome : BaseActivity<HomeViewModel>(R.layout.activity_home) {
                     binding.shimmerCard.hide()
                     binding.dataCardContainer.show()
                     binding.accountNoText.text = state.data.accountNo
-                    binding.balanceText.text = state.data.balance.toString()
+                    binding.balanceText.text = "SGD ${state.data.balance.toString()}"
                     viewModel.getTransactions()
                 }
                 is ViewState.Failed -> {
