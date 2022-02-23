@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/OCBCTest/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/OCBCTest/common/src/main/res/drawable/bg_rounded_gray.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/OCBCTest/common/src/main/res/layout/custom_spinner_textview.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/OCBCTest/common/src/main/res/layout/custom_spinner_widget.xml" value="0.22" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/OCBCTest/features/auth/src/main/res/drawable/bg_login.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/OCBCTest/features/auth/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/OCBCTest/features/auth/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/OCBCTest/features/home/src/main/res/drawable/bg_logout.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/OCBCTest/features/home/src/main/res/drawable/bg_shimmer.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/OCBCTest/features/home/src/main/res/drawable/bg_transfer.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/OCBCTest/features/home/src/main/res/layout/activity_home.xml" value="0.22" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/OCBCTest/features/home/src/main/res/layout/activity_transactions.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/OCBCTest/features/home/src/main/res/layout/activity_transfer.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/OCBCTest/features/home/src/main/res/layout/item_shimmer_transaction.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/OCBCTest/features/home/src/main/res/layout/item_sub_transaction.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/OCBCTest/features/home/src/main/res/layout/item_transaction.xml" value="0.17552083333333332" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

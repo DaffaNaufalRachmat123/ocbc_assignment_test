@@ -1,0 +1,24 @@
+apply plugin: 'com.android.library'
+apply from: '../android_core_dependencies.gradle'
+apply from: '../android_commons.gradle'
+
+kapt {
+    correctErrorTypes = true
+    useBuildCache = true
+    javacOptions {
+        option("-Xmaxerrs", 500)
+    }
+}
+
+dependencies {
+    implementation project(Modules.core)
+    implementation Libraries.BRVAH
+
+    api KotlinLibraries.kotlinCoroutinePlayService
+    implementation Libraries.retrofit
+    implementation Libraries.retrofitGsonConverter
+    implementation Libraries.facebookShimmer
+    implementation Libraries.deeplinkdispatch
+    kapt Libraries.deeplinkdispatchProcessor
+    implementation Libraries.timberLog
+}

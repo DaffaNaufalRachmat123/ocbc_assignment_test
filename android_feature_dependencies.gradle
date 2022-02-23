@@ -1,0 +1,38 @@
+/**
+ * Feature dependencies
+ */
+apply plugin: 'com.android.library'
+apply from: '../../android_core_dependencies.gradle'
+apply from: '../../android_commons.gradle'
+
+kapt {
+    correctErrorTypes = true
+    useBuildCache = true
+    javacOptions {
+        option("-Xmaxerrs", 500)
+    }
+}
+
+dependencies {
+    implementation project(Modules.core)
+    implementation project(Modules.common)
+    implementation project(Modules.UiResources)
+    implementation project(Modules.Navigation)
+
+    implementation Libraries.BRVAH
+    implementation Libraries.facebookShimmer
+    implementation Libraries.sweetAlert
+    // TESTS
+    testImplementation TestLibraries.koin
+    testImplementation TestLibraries.junit
+    testImplementation TestLibraries.archCoreTest
+    testImplementation TestLibraries.coroutine
+    testImplementation TestLibraries.liveData
+    testImplementation 'org.mockito:mockito-core:3.8.0'
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '2.23.4'
+
+    androidTestImplementation 'org.mockito:mockito-android:3.8.0'
+    androidTestImplementation TestLibraries.androidTestRunner
+    androidTestImplementation TestLibraries.junit
+    androidTestImplementation TestLibraries.koin
+}

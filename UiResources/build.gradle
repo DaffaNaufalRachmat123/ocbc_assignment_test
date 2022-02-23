@@ -1,0 +1,19 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion Versions.compileSdk
+    defaultConfig {
+        minSdkVersion Versions.minSdk
+        targetSdkVersion Versions.targetSdk
+        versionCode Releases.versionCode
+        versionName Releases.versionName
+        vectorDrawables.useSupportLibrary = true
+    }
+
+}
+
+dependencies {
+    implementation AndroidLibraries.appCompat
+    implementation AndroidLibraries.material
+    api 'com.intuit.sdp:sdp-android:1.0.6'
+}

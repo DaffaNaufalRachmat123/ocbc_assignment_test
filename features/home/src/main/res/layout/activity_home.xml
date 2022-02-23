@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/labelDashboard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/material_color_black_1"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start"
+            android:textSize="@dimen/_18sdp"
+            android:text="Dashboard"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnLogout"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textAllCaps="false"
+            android:textColor="@color/material_color_red_1"
+            android:textSize="@dimen/_10sdp"
+            android:text="Logout"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_logout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/labelDashboard"
+            app:layout_constraintBottom_toBottomOf="@id/labelDashboard"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/labelDashboard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btnMakeTransfer"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/accountCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="23dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="23dp"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingTop="13dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="13dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/dataCardContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/label1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="You have"
+                            android:textColor="@color/material_color_black_1"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/balanceText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/material_color_black_1"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/label1" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/label2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Account No"
+                            android:textColor="@color/material_gray_2"
+                            android:textSize="@dimen/_12sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/balanceText"
+                            app:layout_constraintTop_toBottomOf="@id/balanceText" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/accountNoText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="0"
+                            android:textColor="@color/material_color_black_1"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="@id/label2"
+                            app:layout_constraintStart_toStartOf="@id/label2"
+                            app:layout_constraintTop_toBottomOf="@id/label2" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/label3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Account Holder"
+                            android:textColor="@color/material_gray_2"
+                            android:textSize="@dimen/_13sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/accountNoText"
+                            app:layout_constraintTop_toBottomOf="@id/accountNoText" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/accountHolderText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="-"
+                            android:textColor="@color/material_color_black_1"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="@id/label3"
+                            app:layout_constraintStart_toStartOf="@id/label3"
+                            app:layout_constraintTop_toBottomOf="@id/label3" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmerCard"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:shimmer_auto_start="true"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <View
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:background="@drawable/bg_shimmer"/>
+                            <View
+                                android:layout_width="@dimen/_200sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/bg_shimmer"/>
+                            <View
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/bg_shimmer"/>
+                            <View
+                                android:layout_width="@dimen/_200sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/bg_shimmer"/>
+                        </LinearLayout>
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/label4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Your Transaction History"
+                android:textColor="@color/material_color_black_1"
+                android:textSize="@dimen/_13sdp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/accountCard"
+                app:layout_constraintStart_toStartOf="@+id/accountCard"
+                app:layout_constraintTop_toBottomOf="@+id/accountCard" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintTransactions"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintTop_toBottomOf="@id/label4"
+                app:layout_constraintStart_toStartOf="@id/label4"
+                app:layout_constraintEnd_toEndOf="@id/label4"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewTransaction"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:scrollbars="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmerTransaction"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:shimmer_auto_start="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical">
+                        <include layout="@layout/item_shimmer_transaction"/>
+                        <include layout="@layout/item_shimmer_transaction"/>
+                        <include layout="@layout/item_shimmer_transaction"/>
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/emptyText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/material_gray_2"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:text="There is no data"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnMakeTransfer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:background="@drawable/bg_transfer"
+            android:layout_marginBottom="16dp"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_14sdp"
+            android:gravity="center"
+            android:text="Make Transfer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/labelDashboard"
+            app:layout_constraintEnd_toEndOf="@id/btnLogout"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
